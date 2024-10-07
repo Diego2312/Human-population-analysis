@@ -33,7 +33,7 @@ plt.ylabel("Population (Billions)")
 plt.xlabel("Year")
 plt.xticks(range(1960, 2030, 10))
 
-plt.show()
+#plt.show()
 
 
 
@@ -47,6 +47,8 @@ df_it_pop = df_world_pop1[df_world_pop1["Country Name"] == "Italy"]
 df_melted2 = pd.melt(df_it_pop, id_vars=['Country Name'], var_name='Year', value_name='Population')
 df_it_pop = df_melted2.loc[3:, ["Year", "Population"]]
 
+#df_it_pop.to_csv(r"C:\Users\Owner\ACSAI\Extra\Human-population-analysis\Datasets\Italy_population.csv")
+
 corr_coef = df_it_gdp["GDP"].corr(df_it_pop["Population"])
 
 #Plot
@@ -59,6 +61,13 @@ plt.ylabel("Population (10 million)")
 plt.xlabel("GDP (trillion)")
 plt.title("Italy population and GDP", fontweight="bold")
 
-plt.savefig(r"C:\Users\Owner\ACSAI\Extra\Human-population-analysis\Plots\IT_Population_GDP.png")
+#plt.savefig(r"C:\Users\Owner\ACSAI\Extra\Human-population-analysis\Plots\IT_Population_GDP.png")
 
-plt.show()
+#plt.show()
+
+
+#Life expectancy
+
+
+
+
